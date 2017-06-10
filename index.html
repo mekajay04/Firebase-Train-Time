@@ -1,10 +1,97 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+	<meta charset="utf-8">
+	<title>Train Scheduler</title>
+
+	<!--BOOTSRAP LINK-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	<!--MY STYLING-->
+	<link rel="stylesheet" href="css/css.css" type="text/css">
 </head>
 
 <body>
+	<div class="jumbotron" style="box-shadow: 10px 10px 5px #888888">
+		<h1 class="display-3">
+			<div style="text-align: center"> <b>W</b>hen is <b>M</b>y Train <b>C</b>oming?</div>
+		</h1>
+		<p>
+			<b>
+  <div style="text-align: center; color:cornflowerblue;">Check Below...Choo Choo... Here We Go!</div>
+  </b>
+		</p>
+	</div>
+	<div class="container">
+		<div class="Article">
+			<h3>
+				<div style="text-align: center">Current Train Schedule</div>
+			</h3>
+			</div>
+			<div class="border"> 
+		
+		<div style="padding-top:15px; padding-left: 20px;">
+			<table id="TrainName" cellpadding="50">
+				<thead>
+					<tr>
+						<td><b>Train Name</b></td>
+						<td><b>Destination</b></td>
+						<td><b>Frequency (min)</b></td>
+						<td><b>Next Arrival</b></td>
+						<td><b>Minutes Away</b></td>
+					</tr>
+				</thead>
+				
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+
+	<br>
+	<div class="container">
+		<div class="Article">
+			<h3>Add Train</h3>
+		</div>
+		<div class="border">
+			<div class="form-group">
+				<label class="form-control-label" for="inputSuccess1">
+      <div style="padding-left: 15px; padding-top:15px;"><b>Train Name</b></div>
+      </label>
+				<input type="text" class="form-control form-control-success" id="train-input">
+			</div>
+			<div class="form-group">
+				<label class="form-control-label" for="inputWarning1">
+      <div style="padding-left:15px"><b>Destination</b></div>
+      </label>
+				<input type="text" class="form-control form-control-warning" id="destination-input">
+			</div>
+			<div class="form-group ">
+				<label class="form-control-label" for="inputDanger1">
+      <div style="padding-left:15px"><b>First Train Time (HH:mm - Military Time)</b></div>
+      </label>
+				<input type="text" class="form-control form-control-danger" id="firstTrain-input">
+			</div>
+			<div class="form-group ">
+				<label class="form-control-label" for="inputDanger1">
+      <div style="padding-left:15px"><b>Frequency (minutes)</b></div>
+      </label>
+				<input type="text" class="form-control form-control-danger" id="frequency-input">
+			</div>
+			<button class="btn btn-default" id="search" type="submit">Add Train to Schedule</button>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	<!-- Moment.js Reference -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<script src="javascript/javafirebase.js" type="text/javascript"></script>
 </body>
+
 </html>

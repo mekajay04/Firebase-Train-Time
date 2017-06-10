@@ -1,3 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
+.Article {
+		margin-top: 50px;
+		padding: 7px 0px 2px 20px;
+		background-color: cadetblue;
+		color: white;
+		
+	}
+.border {
+	border: solid cadetblue;
+	border-width: medium;
+	padding: -10px 0px 2px 20px;
+	
+}
